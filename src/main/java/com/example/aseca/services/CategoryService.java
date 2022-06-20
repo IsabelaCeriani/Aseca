@@ -1,12 +1,11 @@
 package com.example.aseca.services;
 
 import com.example.aseca.models.Category;
-import com.example.aseca.models.Product;
 import com.example.aseca.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.UUID;
 
 @Service
 public class CategoryService {
@@ -18,8 +17,11 @@ public class CategoryService {
         this.categoryRepository = categoryRepository;
     }
 
-    public Category getCategory(Long id) {
-        return categoryRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("No category found with given id"));
+    public Category getCategory(UUID id) {
+        return categoryRepository.findById(id).orElse(null);
     }
 
+    public Category saveCategory(Category category) {
+        return categoryRepository.save(category);
+    }
 }

@@ -29,6 +29,17 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // https://mvnrepository.com/artifact/com.github.myzhan/locust4j
+    implementation 'com.github.myzhan:locust4j:2.2.1'
+    // https://mvnrepository.com/artifact/org.mock-server/mockserver-netty
+//    implementation 'org.mock-server:mockserver-netty:5.13.2'
+//    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+//    implementation 'com.google.code.gson:gson:2.9.0'
+//    // https://mvnrepository.com/artifact/org.springframework/spring-mock
+//    testImplementation 'org.springframework:spring-mock:2.0.8'
+//    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-test
+//    testImplementation 'org.springframework.boot:spring-boot-test:2.7.0'
+
 }
 
 tasks.named('test') {
